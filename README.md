@@ -13,14 +13,16 @@ Using DesiredCapabilities:
 
 Using MutableCapabilties with W3C WebDriver:
 
-```MutableCapabilities sauceOptions = new MutableCapabilities();
+```
+MutableCapabilities sauceOptions = new MutableCapabilities();
 sauceOptions.setCapability("username", SAUCE_USERNAME);
 sauceOptions.setCapability("accessKey", SAUCE_ACCESS_KEY);
 sauceOptions.setCapability("seleniumVersion", SELENIUM_VERSION);
 sauceOptions.setCapability("name", TEST_NAME);
 MutableCapabilities capabilities = new MutableCapabilities();
-capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
-capabilities.setCapability("sauce:options", sauceOptions);```
+capabilities.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
+capabilities.setCapability("sauce:options", sauceOptions);
+```
 
 Alternately, you can set the name using the Sauce Labs javascript executor during the test:
 
