@@ -17,7 +17,7 @@ Using MutableCapabilties with W3C WebDriver:
   sauceOptions.setCapability("username", SAUCE_USERNAME);
   sauceOptions.setCapability("accessKey", SAUCE_ACCESS_KEY);
   sauceOptions.setCapability("seleniumVersion", SELENIUM_VERSION);
-  sauceOptions.setCapability("name", TEST_NAME);```
+  sauceOptions.setCapability("name", TEST_NAME);
   
   MutableCapabilities capabilities = new MutableCapabilities();
   capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
