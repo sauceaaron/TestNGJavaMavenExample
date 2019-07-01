@@ -26,7 +26,7 @@ capabilities.setCapability("sauce:options", sauceOptions);
 
 Alternately, you can set the name using the Sauce Labs javascript executor during the test:
 
-```driver.executeScript("sauce:job-name=MyTestName");```
+```driver.executeScript("sauce:job-name=" + TEST_NAME);```
 
 Or using the Sauce REST api at any point, including after the test is completed:
 
