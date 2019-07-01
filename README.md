@@ -2,16 +2,15 @@
 
 This demonstrates various ways you can configure a simple test using Selenium Webdriver with TestNG.
 
-The custom capability "name" set the test name which is usefule for reporting and analytics in Sauce Labs.
+You can specify the custom capability "name" to set the test name which is usefule for reporting and analytics in Sauce Labs.
 
 Note how capabilities are set differently in W3C Webdriver MutableCapabilities vs previously in DesiredCapabilities.
-Using W3C Capabilities you need to specify "name" under "sauce:options"
 
-Using DesiredCapabilities:
+Using older versions of webDriver with DesiredCapabilities you can set "name" directly:
 
 ```desiredCapabilities.setCapability("name", TEST_NAME);```
 
-Using MutableCapabilties with W3C WebDriver:
+Using W3C Capabilities you need to specify "name" under "sauce:options" with MutableCapabilities
 
 ```
 MutableCapabilities sauceOptions = new MutableCapabilities();
