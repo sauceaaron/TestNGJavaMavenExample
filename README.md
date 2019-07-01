@@ -18,6 +18,7 @@ sauceOptions.setCapability("username", SAUCE_USERNAME);
 sauceOptions.setCapability("accessKey", SAUCE_ACCESS_KEY);
 sauceOptions.setCapability("seleniumVersion", SELENIUM_VERSION);
 sauceOptions.setCapability("name", TEST_NAME);
+
 MutableCapabilities capabilities = new MutableCapabilities();
 capabilities.setCapability(ChromeOptions.CAPABILITY, new ChromeOptions());
 capabilities.setCapability("sauce:options", sauceOptions);
@@ -32,6 +33,7 @@ Or using the Sauce REST api at any point, including after the test is completed:
 ```
 HashMap<String, Object> jobInfo = new HashMap<>();
 jobInfo.put("name", TEST_NAME);
+
 SauceREST api = new SauceREST(SAUCE_USERNAME, SAUCE_ACCESS_KEY);
 api.updateJobInfo(sessionId, jobInfo);
 ```
